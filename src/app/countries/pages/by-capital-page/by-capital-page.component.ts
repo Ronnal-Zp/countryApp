@@ -17,7 +17,6 @@ export class ByCapitalPageComponent {
   public countries: Country[] = [];
 
   public searchByCapital(term: string): void {
-    console.log({term});
     this.countriesService.searchCapital(term)
       .subscribe(countries => {
         this.countries = countries;
