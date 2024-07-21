@@ -15,11 +15,15 @@ export class ByCountryPageComponent {
   ) { }
 
   public countries: Country[] = [];
+  public isLoading: boolean = false;
 
   public searchByCountry(term: string): void {
+    this.isLoading = true;
+
     this.countriesService.searchCountry(term)
       .subscribe(countries => {
         this.countries = countries;
+        this.isLoading = false;
       })
   }
 }

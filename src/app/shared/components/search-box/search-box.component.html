@@ -1,4 +1,5 @@
-<input   (keyup.enter)="search(txtInput.value)"
+<input  (keyup.enter)="search(txtInput.value)"
+        (keyup)="onKeyPress(txtInput.value)"
         [placeholder]="placeholder"
         #txtInput
         type="text" class="form-control">
